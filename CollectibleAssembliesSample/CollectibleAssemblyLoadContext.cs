@@ -3,9 +3,9 @@ using System.Runtime.Loader;
 
 namespace CollectibleAssembliesSample
 {
-    public class UnloadableAssemblyLoadContext : AssemblyLoadContext
+    public class CollectibleAssemblyLoadContext : AssemblyLoadContext
     {
-        public UnloadableAssemblyLoadContext() : base(isCollectible: true)
+        public CollectibleAssemblyLoadContext() : base(isCollectible: true)
         { }
 
         protected override Assembly Load(AssemblyName assemblyName)
